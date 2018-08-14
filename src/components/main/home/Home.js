@@ -44,8 +44,11 @@ class Home extends Component {
                         <th>AGE</th>
                     </tr>
                 </thead>
-                {this.state.users.map(user => <tr key={user._id} onClick={this.onUserClick.bind(this, user._id)}>
-                <td>{user._id}</td><td>{user.name}</td><td>{user.age}</td><button onClick={this.onDeleteUser.bind(this, user._id)}>удалить</button></tr>)}
+                {this.state.users.map(user => <tr key={user._id}><div onClick={this.onUserClick.bind(this, user._id)}>
+                <td>{user._id}</td>
+                <td>{user.name}</td>
+                <td>{user.age}</td></div>
+                <button onClick={this.onDeleteUser.bind(this, user._id)}>удалить</button></tr>)}
             </table>
           </div>
         );
